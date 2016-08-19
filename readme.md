@@ -3,6 +3,13 @@
 
 A demonstration of how easy it is to DoS a web server just from the browser.
 
+## Disclaimer
+
+Denial-of-Service attacks are illegal. I take no responsibility if someone
+decides to use my findings maliciously.
+
+**Please do not use this to bring down someone else's site.**
+
 ## The Code
 
 ```js
@@ -52,3 +59,9 @@ this flooding. Here's an entry from the syslog during my testing.
 ```
 Aug 19 20:17:28 chi1 kernel: [3027272.966535] TCP: TCP: Possible SYN flooding on port 80. Sending cookies.  Check SNMP counters.
 ```
+
+This tool is especially dangerous due to how easy it is to scale. Someone
+maliciously managing to inject something like this on a popular website could
+easily bring down even well protected sites, I imagine.
+
+Chrome really needs to fix this...
